@@ -3,16 +3,17 @@ import { getRandom, getBrainGames } from '../index.js';
 const termsBrainProgression = 'What number is missing in the progression?';
 
 const getBrainParamProgression = (randomFirstInt, randomStep, randomElem) => {
-    const question = [];
+    const array = [];
     let elemOfQuestion = randomFirstInt;
 
     for (let i = 0; i < 10; i += 1) {
-        question.push(elemOfQuestion);
+        array.push(elemOfQuestion);
         elemOfQuestion += randomStep;
     }
-    const trueAnswer = question[randomElem + 1];
+    const trueAnswer = array[randomElem + 1];
     const twoDot = '..';
-    question[randomElem + 1] = twoDot;
+    array[randomElem + 1] = twoDot;
+    const question = array.join(' ');
     return [question, trueAnswer];
 };
 
