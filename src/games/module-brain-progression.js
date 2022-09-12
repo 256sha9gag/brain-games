@@ -21,7 +21,7 @@ const getBrainParamProgression = (randomFirstInt, randomStep, randomElem) => {
 const sendBrainParamProgression = () => {
   const randomFirstInt = getRandom(100);
   const randomStep = getRandom(10);
-  const randomElem = getRandom(10);
+  const randomElem = getRandom(8);
 
   return getBrainParamProgression(randomFirstInt, randomStep, randomElem);
 };
